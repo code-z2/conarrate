@@ -1,6 +1,8 @@
 import React from 'react'
 import { FiSearch } from "react-icons/fi";
 import { HiOutlineBell } from "react-icons/hi2";
+// import { Avatar } from './ui/avatar';
+
 
 function Navbar() {
   return (
@@ -15,7 +17,10 @@ function Navbar() {
     </div>
     <div className='flex items-center gap-3 mr-3'>
     <HiOutlineBell size={25}/>
-    <span>***</span>
+    {/* <Avatar>
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar> */}
     </div>
     </div>
   )

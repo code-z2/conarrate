@@ -3,7 +3,7 @@ module.exports = {
     content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@shadcn/ui/components/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@shadcn/ui/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
   	extend: {
@@ -24,11 +24,19 @@ module.exports = {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
-			fontFamily: {
-        body: ["Albert Sans", "sans-serif"],
-				head: ["Mystery Quest", "serif"]
-      },
+  		fontFamily: {
+  			body: [
+  				'Albert Sans',
+  				'sans-serif'
+  			],
+  			head: [
+  				'Mystery Quest',
+  				'serif'
+  			]
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
 }
+
+

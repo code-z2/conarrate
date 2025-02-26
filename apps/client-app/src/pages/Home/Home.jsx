@@ -8,6 +8,7 @@ import { MdOutlineMoreHoriz, MdIosShare } from "react-icons/md";
 import { CiClock2 } from "react-icons/ci";
 import { TbMoneybag, TbArrowBigUp, TbArrowBigDown } from "react-icons/tb";
 
+
 const myBtn = [
   "Tending",
   "Cryptocurrency",
