@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import { IoIosLogOut } from "react-icons/io";
 import { TbSmartHome, TbMoneybag } from "react-icons/tb";
 import { PiChatTeardropText, PiBookOpenText } from "react-icons/pi";
@@ -8,10 +8,12 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { LuCircleHelp, LuSettings } from "react-icons/lu";
 import { GoPeople } from "react-icons/go";
 import { MdOutlinePrivacyTip } from "react-icons/md";
+import Modal from './Modal';
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex flex-col h-[1024px] w-[230px] text-[#090909]">
+    <div className="flex flex-col h-[1024px] w-[220px] text-[#090909]">
       {/* Sidebar Header */}
       <div className="flex items-center h-16">
         <h1 className="text-[24px] font-head text-[#51016D] px-3">Conarrative</h1>
@@ -27,9 +29,10 @@ function Sidebar() {
           <span className="ml-2 flex items-center gap-2"> <PiChatTeardropText size={20}/>Popular</span>
         </a>
         <h2 className='font-medium'>TOPICS</h2>
-        <a href="#" className="flex items-center p-2 hover:bg-[#FCF4FF] hover:shadow-md rounded hover:text-[#51016D]">
-          <span className="ml-2 flex items-center gap-2"> <FaPlus size={20}/>Create New Topic</span>
-        </a>
+        <button onClick={() => setIsOpen(true)} className="flex items-center p-2 hover:bg-[#FCF4FF] hover:shadow-md rounded hover:text-[#51016D]">
+        <span className="ml-2 flex items-center gap-2"> <FaPlus size={20}/>Create New Topic</span>
+      </button>
+      {isOpen && <Modal onClose={() => setIsOpen(false)} />}
         <a href="#" className="flex items-center p-2 hover:bg-[#FCF4FF] hover:shadow-md rounded hover:text-[#51016D]">
           <span className="ml-2 flex items-center gap-2"><TbMoneybag size={20}/> Crypto</span>
         </a>

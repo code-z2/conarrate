@@ -2,6 +2,7 @@ import React from 'react'
 import { FiSearch } from "react-icons/fi";
 import { HiOutlineBell } from "react-icons/hi2";
 // import { Avatar } from './ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 
 function Navbar() {
@@ -16,11 +17,11 @@ function Navbar() {
       />
     </div>
     <div className='flex items-center gap-3 mr-3'>
-    <HiOutlineBell size={25}/>
-    {/* <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+    <HiOutlineBell size={33}/>
+    <Avatar >
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn"/>
       <AvatarFallback>CN</AvatarFallback>
-    </Avatar> */}
+    </Avatar>
     </div>
     </div>
   )
