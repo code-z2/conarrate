@@ -1,0 +1,29 @@
+
+[0m[2m[35m$[0m [2m[1mtsup --format esm --dts[0m
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.3.5
+[34mCLI[39m Using tsup config: /Users/peter/Developer/2025/conarrate/packages/core/tsup.config.ts
+[34mCLI[39m Target: node18
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[32mESM[39m [1mdist/chunk-672HY72Z.js         [22m[32m4.02 KB[39m
+[32mESM[39m [1mdist/chunk-4NHCVC5P.js         [22m[32m156.87 KB[39m
+[32mESM[39m [1mdist/_esm-L4OBJJWB.js          [22m[32m130.56 KB[39m
+[32mESM[39m [1mdist/chunk-PR4QN5HX.js         [22m[32m1.87 KB[39m
+[32mESM[39m [1mdist/index.js                  [22m[32m523.52 KB[39m
+[32mESM[39m [1mdist/chunk-LCSUOOZR.js         [22m[32m76.40 KB[39m
+[32mESM[39m [1mdist/secp256k1-ARCYQQLX.js     [22m[32m267.00 B[39m
+[32mESM[39m [1mdist/ccip-C3PJRZNQ.js          [22m[32m320.00 B[39m
+[32mESM[39m [1mdist/chunk-672HY72Z.js.map     [22m[32m16.00 KB[39m
+[32mESM[39m [1mdist/_esm-L4OBJJWB.js.map      [22m[32m211.08 KB[39m
+[32mESM[39m [1mdist/chunk-4NHCVC5P.js.map     [22m[32m405.65 KB[39m
+[32mESM[39m [1mdist/secp256k1-ARCYQQLX.js.map [22m[32m71.00 B[39m
+[32mESM[39m [1mdist/ccip-C3PJRZNQ.js.map      [22m[32m71.00 B[39m
+[32mESM[39m [1mdist/chunk-LCSUOOZR.js.map     [22m[32m195.31 KB[39m
+[32mESM[39m [1mdist/chunk-PR4QN5HX.js.map     [22m[32m71.00 B[39m
+[32mESM[39m [1mdist/index.js.map              [22m[32m1.54 MB[39m
+[32mESM[39m ⚡️ Build success in 499ms
+DTS Build start
+DTS ⚡️ Build success in 10837ms
+DTS dist/index.d.ts 111.99 KB

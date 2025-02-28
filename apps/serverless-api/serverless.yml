@@ -1,0 +1,51 @@
+org: peteruche21
+
+app: conarrate
+service: conarrate
+
+stages:
+  default:
+    params:
+      storiesTableName: "${self:service}-${sls:stage}-stories"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  environment:
+    STORIES_TABLE: ${param:storiesTableName}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource:
+            - Fn::GetAtt: [StoriesTable, Arn]
+
+functions:
+  api:
+    handler: src.index.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+
+resources:
+  Resources:
+    StoriesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: hash
+            AttributeType: S
+        KeySchema:
+          - AttributeName: hash
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${param:storiesTableName}
