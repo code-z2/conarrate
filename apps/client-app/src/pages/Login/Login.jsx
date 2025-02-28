@@ -1,5 +1,21 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Copy } from "lucide-react"
+import { Link } from "react-router";
+ 
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 function Login() {
   return (
@@ -14,13 +30,53 @@ function Login() {
             <p>Connect your wallet to get started</p>
           </div>
           <div className="flex flex-col gap-1 mb-10">
-            <Button variant="outline">
+          <Dialog>
+      <DialogTrigger asChild>
+      <Button variant="outline">
               <img
                 src="/icons/Metamask-Icon--Streamline-Svg-Logos.svg"
                 alt=""
               />{" "}
               Metamask
             </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>ETH Wallet Address</DialogTitle>
+          <DialogDescription>
+            Please enter your ETH wallet Address
+          </DialogDescription>
+        </DialogHeader>
+        <div className="flex items-center space-x-2">
+          <div className="grid flex-1 gap-2">
+            <Input
+              id="link"
+              defaultValue="https://ui.shadcn.com/docs/installation"
+              readOnly
+            />
+          </div>
+        </div>
+        <DialogFooter className="sm:justify-start">
+          <DialogClose asChild>
+            <Button type="button" variant="secondary" >
+              <Link to="/home">
+              Sign In
+              </Link>
+              
+            </Button>
+          </DialogClose>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+
+
+            {/* <Button variant="outline">
+              <img
+                src="/icons/Metamask-Icon--Streamline-Svg-Logos.svg"
+                alt=""
+              />{" "}
+              Metamask
+            </Button> */}
             <Button variant="outline">
               <img src="/icons/Vector (3).svg" alt="" />
               Argent
